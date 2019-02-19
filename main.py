@@ -51,7 +51,7 @@ def travel(color, wait):
 # the last LED and works its way to LED. Fill the LED with the given color.
 def travel_back(color, wait):
     num_pixels = len(pixels)
-    for pos in range(num_pixels, 0, -1):
+    for pos in reversed(range(num_pixels)):
         pixels[pos] = color 
         pixels.show() 
         time.sleep(wait)
